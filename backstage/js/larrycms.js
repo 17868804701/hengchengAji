@@ -57,7 +57,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                     "pid": "35"
                 },
                 {
-                    "title": "报表",
+                    "title": "报表管理",
                     "icon": "larry-weixingongzhongpingtai",
                     "pid": "40"
                 }
@@ -108,7 +108,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                         },
                             {
                                 "pid": "101",
-                                "title": "数据库配置",
+                                "title": "数据字典配置",
                                 "icon": "larry-gerenxinxi5",
                                 "spread": "true",
                                 "children": [{
