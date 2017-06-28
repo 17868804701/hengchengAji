@@ -172,15 +172,6 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                     "title": "运单单证信息更改",
                                     "icon": "larry-xiugaimima2",
                                     "href": "html/listOrder.html"
-                                },
-                                {
-                                    "title": "运单信息检索、查看",
-                                    "icon": "larry-rizhi2",
-                                    "href": "html/myloginfo.html"
-                                },{
-                                    "title": "运单信息删除",
-                                    "icon": "larry-rizhi2",
-                                    "href": "html/myloginfo.html"
                                 },{
                                     "title": "操作记录日志",
                                     "icon": "larry-rizhi2",
@@ -194,7 +185,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                 "children": [{
                                     "title": "运单仓储信息录入",
                                     "icon": "larry-gerenxinxi1",
-                                    "href": "html/personInfo.html"
+                                    "href": "html/cangchuInsert.html"
                                 },
                                     {
                                         "title": "运单仓储信息更改",
