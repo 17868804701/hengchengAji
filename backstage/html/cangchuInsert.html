@@ -26,30 +26,9 @@
 </fieldset>
 <form class="layui-form" action="">
     <div class="layui-inline" style="margin-bottom: 20px;">
-        <label class="layui-form-label">陆运状态</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
-    <div class="layui-inline" style="margin-bottom: 20px;">
-        <label class="layui-form-label">费用状态</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
-    <div class="layui-inline" style="margin-bottom: 20px;">
         <label class="layui-form-label">入仓编号</label>
         <div class="layui-input-inline">
             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
-    <div class="layui-inline" style="margin-bottom: 20px;">
-        <label class="layui-form-label" style="width: 100px">报关状态/时间</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-        <div class="layui-input-inline">
-            <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
         </div>
     </div>
 
@@ -57,6 +36,28 @@
         <label class="layui-form-label">货物编号</label>
         <div class="layui-input-inline">
             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-inline" style="margin-bottom: 20px;">
+        <label class="layui-form-label" style="width: 100px">三检状态/时间</label>
+        <div class="layui-input-inline" style="width: 144px">
+            <select name="modules" lay-verify="required" lay-search="">
+                <option value="">检查类型</option>
+                <option value="1">海关检查</option>
+                <option value="2">三检检查</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <input type="text" name="date" id="date" lay-verify="date" placeholder="检查时间" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+        </div>
+        <div class="layui-input-inline" style="width: 144px">
+            <select name="modules" lay-verify="required" lay-search="">
+                <option value="">选择状态</option>
+                <option value="1">已检查</option>
+                <option value="2">未检查</option>
+                <option value="3">通过</option>
+            </select>
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 20px;">
@@ -94,26 +95,7 @@
             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
         </div>
     </div>
-    <div class="layui-inline" style="margin-bottom: 20px;">
-        <label class="layui-form-label">出库确认</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
-    <div class="layui-inline" style="margin-bottom: 20px;">
-        <label class="layui-form-label" style="width: 100px">三检状态/时间</label>
-        <div class="layui-input-inline" style="width: 144px">
-            <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">已检查</option>
-                <option value="2">未检查</option>
-                <option value="3">通过</option>
-            </select>
-        </div>
-        <div class="layui-input-inline">
-            <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
-        </div>
-    </div>
+
     <div class="layui-inline" style="margin-bottom: 20px;">
         <label class="layui-form-label">品名</label>
         <div class="layui-input-inline">
@@ -183,332 +165,184 @@
             </select>
         </div>
     </div>
+    <div class="layui-form">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th style="width: 30px"></th>
+                <th style="width: 100px;">分批件数</th>
+                <th style="width: 100px">分批重量</th>
+                <th style="width: 90px">包装类型</th>
+                <th style="width: 90px">入库日期</th>
+                <th style="width: 100px">货信息备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>第一批</td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline" style="width: 144px">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">普货</option>
+                            <option value="2">散货</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>第二批</td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline" style="width: 144px">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">普货</option>
+                            <option value="2">散货</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>第三批</td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline" style="width: 144px">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">普货</option>
+                            <option value="2">散货</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">目的港</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">目的地</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline"  style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">付款方式</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">货物类型</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">入仓信息</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">代理</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">主运单号</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">分运单号</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">航班编号</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline"  style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">开航日期</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline"  style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">航班日期</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline"  style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">到港日期</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">总运件单数</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">计费重量</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件重量" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">主运单类型</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline"style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">唛头</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="第二监管区" value="第二监管区" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">运输条款</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-            <!--</select>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">体积</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>    <div class="layui-inline" style="margin-bottom: 20px;" >-->
-    <!--<label class="layui-form-label">毛重</label>-->
-    <!--<div class="layui-input-inline">-->
-        <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-    <!--</div>-->
-<!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">包装方式</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">地面代理</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">舱单状态</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">运费金额</label>-->
-        <!--<div class="layui-input-inline" style="width: 144px">-->
-            <!--<select name="modules" lay-verify="required" lay-search="">-->
-                <!--<option value="">直接选择或搜索选择</option>-->
-                <!--<option value="1">layer</option>-->
-                <!--<option value="2">form</option>-->
-                <!--<option value="3">layim</option>-->
-                <!--<option value="4">element</option>-->
-                <!--<option value="5">laytpl</option>-->
-                <!--<option value="6">upload</option>-->
-                <!--<option value="7">laydate</option>-->
-                <!--<option value="8">laypage</option>-->
-                <!--<option value="9">flow</option>-->
-                <!--<option value="10">util</option>-->
-                <!--<option value="11">code</option>-->
-                <!--<option value="12">tree</option>-->
-                <!--<option value="13">layedit</option>-->
-                <!--<option value="14">nav</option>-->
-                <!--<option value="15">tab</option>-->
-                <!--<option value="16">table</option>-->
-                <!--<option value="17">select</option>-->
-                <!--<option value="18">checkbox</option>-->
-                <!--<option value="19">switch</option>-->
-                <!--<option value="20">radio</option>-->
-            <!--</select>-->
-
-        <!--</div>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入品名" style="width: 100px"  class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline"style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">品名</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入品名" style="width: 300px"  class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">备注</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入品名" style="width: 400px"  class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="layui-inline" style="margin-bottom: 20px;">-->
-        <!--<label class="layui-form-label">发货人</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输发货人名称" style="width: 300px"  class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-inline" style="margin-bottom: 20px;" >-->
-        <!--<label class="layui-form-label">收货人</label>-->
-        <!--<div class="layui-input-inline">-->
-            <!--<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输收货人名称" style="width: 400px"  class="layui-input">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="layui-form-item" style="margin-top: -60px;margin-left: 75%">-->
-        <!--<label class="layui-form-label">是否月结客户</label>-->
-        <!--<div class="layui-input-block">-->
-            <!--<input type="checkbox" name="close" lay-skin="switch" lay-text="是|否">-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="layui-form-item" style="margin-top: 10px;margin-left: -50px">
+    <div class="layui-form-item" pane="" style="margin-left: -140px;">
+        <div class="layui-input-block">
+            <input type="checkbox" name="like1[write]" lay-skin="primary" title="破损" checked="">
+            <input type="checkbox" name="like1[read]" lay-skin="primary" title="破损确认">
+        </div>
+    </div>
+    <div class="layui-form">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th style="width: 100px">品名</th>
+                <th style="width: 100px;">包装类型</th>
+                <th style="width: 100px">破损件数</th>
+                <th style="width: 90px">破损情况</th>
+                <th style="width: 90px">处理意见</th>
+                <th style="width: 100px">备注</th>
+                <th style="width: 100px">破损照片</th>
+                <th style="width: 100px">上传文件</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="layui-form-item layui-form-text" style="margin-left: -80px;">
+        <label class="layui-form-label">移库信息</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请输入移库信息" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item" style="margin-top: 10px;margin-left: -120px">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>

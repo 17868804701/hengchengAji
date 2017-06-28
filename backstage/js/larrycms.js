@@ -190,7 +190,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                     {
                                         "title": "运单仓储信息更改",
                                         "icon": "larry-xiugaimima2",
-                                        "href": "html/changepwd.html"
+                                        "href": "html/cangkuUpdate.html"
                                     },
                                     {
                                         "title": "运单信息检索、查看",
