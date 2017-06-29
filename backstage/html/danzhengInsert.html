@@ -26,6 +26,18 @@
 </fieldset>
 <form class="layui-form" action="">
     <div class="layui-inline" style="margin-bottom: 13px;">
+        <label class="layui-form-label">主运单号</label>
+        <div class="layui-input-inline">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入主运单号" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-inline" style="margin-bottom: 13px;">
+        <label class="layui-form-label">分运单号</label>
+        <div class="layui-input-inline">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入分运单号" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">到港日期</label>
         <div class="layui-input-inline">
             <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
@@ -34,19 +46,19 @@
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">操作员</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入操作员" class="layui-input">
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">承运人</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入承运人" class="layui-input">
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">货物编号</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入货物编号" class="layui-input">
         </div>
     </div>
 
@@ -54,27 +66,10 @@
         <label class="layui-form-label">起运港</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="">选择或搜索</option>
+                <option value="1">码港</option>
+                <option value="2">码港</option>
+                <option value="3">码港码港</option>
             </select>
         </div>
     </div>
@@ -83,27 +78,10 @@
         <label class="layui-form-label">目的港</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="">选择或搜索</option>
+                <option value="1">PVG</option>
+                <option value="2">码港</option>
+                <option value="3">码港码港</option>
             </select>
         </div>
     </div>
@@ -112,10 +90,10 @@
         <label class="layui-form-label">目的地</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
+                <option value="">选择或搜索</option>
+                <option value="1">上海</option>
+                <option value="2">上海虹桥</option>
+                <option value="3">黄浦江</option>
             </select>
         </div>
     </div>
@@ -124,27 +102,9 @@
         <label class="layui-form-label">付款方式</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="">请选择选择</option>
+                <option value="1">预付</option>
+                <option value="2">到付</option>
             </select>
         </div>
     </div>
@@ -154,26 +114,8 @@
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
                 <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="1">普货</option>
+                <option value="2">散货</option>
             </select>
         </div>
     </div>
@@ -183,27 +125,10 @@
         <label class="layui-form-label">入仓信息</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="">内仓</option>
+                <option value="1">内仓</option>
+                <option value="2">外仓</option>
+                <option value="3">内仓</option>
             </select>
         </div>
     </div>
@@ -213,46 +138,18 @@
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
                 <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="1">普通代理</option>
+                <option value="2">货运代理</option>
+                <option value="3">地面代理</option>
             </select>
         </div>
     </div>
 
-    <div class="layui-inline" style="margin-bottom: 13px;">
-        <label class="layui-form-label">主运单号</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
-    <div class="layui-inline" style="margin-bottom: 13px;">
-        <label class="layui-form-label">分运单号</label>
-        <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
-        </div>
-    </div>
+
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">航班编号</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入航班编号" class="layui-input">
         </div>
     </div>
 
@@ -291,7 +188,7 @@
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">主运单类型</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入编号" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输运单类型" class="layui-input">
         </div>
     </div>
     <div class="layui-inline"style="margin-bottom: 13px;" >
@@ -306,71 +203,55 @@
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
                 <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
+                <option value="1">EXW</option>
+                <option value="2">CIF</option>
+                <option value="3">FOB</option>
+                <option value="4">DAP</option>
             </select>
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;" >
         <label class="layui-form-label">体积</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件体积" class="layui-input">
         </div>
     </div>    <div class="layui-inline" style="margin-bottom: 13px;" >
     <label class="layui-form-label">毛重</label>
     <div class="layui-input-inline">
-        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">
+        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件毛重" class="layui-input">
     </div>
 </div>
     <div class="layui-inline" style="margin-bottom: 13px;" >
         <label class="layui-form-label">包装方式</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入包装方式" class="layui-input">
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;" >
         <label class="layui-form-label">地面代理</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="地面代理" class="layui-input">
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;" >
         <label class="layui-form-label">舱单状态</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入运件单数" class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入船舱状态" class="layui-input">
         </div>
     </div>
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">运费金额</label>
         <div class="layui-input-inline" style="width: 144px">
             <select name="modules" lay-verify="required" lay-search="">
-                <option value="">直接选择或搜索选择</option>
-                <option value="1">layer</option>
-                <option value="2">form</option>
-                <option value="3">layim</option>
-                <option value="4">element</option>
-                <option value="5">laytpl</option>
-                <option value="6">upload</option>
-                <option value="7">laydate</option>
-                <option value="8">laypage</option>
-                <option value="9">flow</option>
-                <option value="10">util</option>
-                <option value="11">code</option>
-                <option value="12">tree</option>
-                <option value="13">layedit</option>
-                <option value="14">nav</option>
-                <option value="15">tab</option>
-                <option value="16">table</option>
-                <option value="17">select</option>
-                <option value="18">checkbox</option>
-                <option value="19">switch</option>
-                <option value="20">radio</option>
+                <option value="">输入三字代码</option>
+                <option value="1">AGI</option>
+                <option value="2">ZSD</option>
+                <option value="3">VGF</option>
             </select>
 
         </div>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入品名" style="width: 100px"  class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入价格" style="width: 100px"  class="layui-input">
         </div>
     </div>
     <div class="layui-inline"style="margin-bottom: 13px;">
@@ -382,7 +263,7 @@
     <div class="layui-inline" style="margin-bottom: 13px;">
         <label class="layui-form-label">备注</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入品名" style="width: 400px"  class="layui-input">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="备注" style="width: 400px"  class="layui-input">
         </div>
     </div>
 

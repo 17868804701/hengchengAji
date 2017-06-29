@@ -58,7 +58,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                 },
                 {
                     "title": "报表管理",
-                    "icon": "larry-weixingongzhongpingtai",
+                    "icon": "&#xe62c;",
                     "pid": "40"
                 }
                 // ,
@@ -114,18 +114,24 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                 "children": [{
                                     "title": "航空公司信息配置",
                                     "icon": "larry-gerenxinxi1",
-                                    "href": "html/personInfo.html"
+                                    "href": "html/hangkongInfo.html"
                                 },
                                     {
-                                        "title": "客户信息",
+                                        "title": "客户信息配置",
                                         "icon": "larry-xiugaimima2",
-                                        "href": "html/changepwd.html"
+                                        "href": "html/kehuInfo.html"
                                     },
                                     {
-                                        "title": "系统用户角色",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    }]
+                                        "title": "代理信息配置",
+                                        "icon": "larry-xiugaimima2",
+                                        "href": "html/kehuInfo.html"
+                                    },
+                                    // {
+                                    //     "title": "系统用户角色",
+                                    //     "icon": "larry-rizhi2",
+                                    //     "href": "html/myloginfo111.html"
+                                    // }
+                                ]
                             },
                             {
                                 "pid": "102",
@@ -135,12 +141,12 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                 "children": [{
                                     "title": "用户配置",
                                     "icon": "larry-yonghuliebiao1",
-                                    "href": "html/main.html"
+                                    "href": "html/yonghupeizhi.html"
                                 },
                                     {
                                         "title": "用户角色设定",
                                         "icon": "larry-jiaoseguanli1",
-                                        "href": "html/temp.html"
+                                        "href": ""
                                     }]
                             },
                             {
@@ -151,12 +157,12 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                 "children": [{
                                     "title": "用户角色配置",
                                     "icon": "larry-kehuliebiao",
-                                    "href": "html/temp.html"
+                                    "href": ""
                                 },
                                     {
                                         "title": "用户角色权限划分",
                                         "icon": "larry-liuyan",
-                                        "href": "html/temp.html"
+                                        "href": ""
                                     }]
                             }];
                         var pid_35 = [{
@@ -166,16 +172,12 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                             "children": [{
                                 "title": "运单单证信息录入",
                                 "icon": "larry-gerenxinxi1",
-                                "href": "html/insertOrder.html"
+                                "href": "html/danzhengInsert.html"
                             },
                                 {
                                     "title": "运单单证信息更改",
                                     "icon": "larry-xiugaimima2",
-                                    "href": "html/listOrder.html"
-                                },{
-                                    "title": "操作记录日志",
-                                    "icon": "larry-rizhi2",
-                                    "href": "html/myloginfo.html"
+                                    "href": "html/danzhengUpdate.html"
                                 }]
                         },
                             {
@@ -190,73 +192,56 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                     {
                                         "title": "运单仓储信息更改",
                                         "icon": "larry-xiugaimima2",
-                                        "href": "html/cangkuUpdate.html"
-                                    },
-                                    {
-                                        "title": "运单信息检索、查看",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    },{
-                                        "title": "运单信息删除",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    },{
-                                        "title": "运单仓储货物照片",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    },{
-                                        "title": "证明材料照片上传",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    },{
-                                        "title": "操作记录日志",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
-                                    },{
-                                        "title": "运单提货流程",
-                                        "icon": "larry-rizhi2",
-                                        "href": "html/myloginfo.html"
+                                        "href": "html/cangchuUpdate.html"
                                     }]
                             },
                             {
                                 "title": "运单流程处理",
                                 "icon": "larry-fujianguanli",
                                 "spread": "true",
-                                "children": [{
-                                    "title": "运单信息检索查看",
-                                    "icon": "larry-shangchuanfujian",
-                                    "href": "html/temp.html"
-                                },
+                                "children": [
                                     {
-                                        "title": "运单流程信息录入更改",
+                                        "title": "运单信息操作",
                                         "icon": "larry-fujian",
-                                        "href": "html/temp.html"
+                                        "href": "html/yundancaozuo.html"
                                     },
+                                    {
+                                        "title": "运单流程信息录入",
+                                        "icon": "larry-fujian",
+                                        "href": "html/yundanInsert.html"
+                                    },
+                                    {
+                                    "title": "运单信息更改",
+                                    "icon": "larry-shangchuanfujian",
+                                    "href": "html/yundanUpdate.html"
+                                     },
                                     {
                                         "title": "运单抽单流程",
                                         "icon": "larry-wenjianguanli2",
-                                        "href": "html/temp.html"
+                                        "href": ""
                                     },
                                     {
                                         "title": "运单结算流程",
                                         "icon": "larry-wenjianguanli2",
-                                        "href": "html/temp.html"
+                                        "href": ""
                                     },
                                     {
                                         "title": "运单提货流程",
                                         "icon": "larry-wenjianguanli2",
-                                        "href": "html/temp.html"
+                                        "href": ""
                                     }]
                             }];
                         var pid_40 = [{
                             "title": "报表管理",
-                            "icon": "larry-weixinguanli",
+                            "icon": "&#xe62c;",
                             "spread": "true",
-                            "children": [{
-                                "title": "导出报表",
-                                "icon": "larry-api1",
-                                "href": "html/temp.html"
-                            },{
+                            "children": [
+                            //     {
+                            //     "title": "导出报表",
+                            //     "icon": "larry-api1",
+                            //     "href": "html/temp.html"
+                            // },
+                                {
                                 "title": "报表模板配置",
                                 "icon": "larry-api1",
                                 "href": "html/temp.html"

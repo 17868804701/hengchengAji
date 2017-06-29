@@ -21,7 +21,16 @@ layui.use(['jquery','layer','form'],function(){
     
     //登录链接测试，使用时可删除
     $(".submit_btn").click(function(){
-      location.href="index.html";
+        if($(".login_txtbx").val()=='admin'){
+            location.href="index.html";
+        }else {
+            layui.use('layer', function(){
+                var layer = layui.layer;
+
+                layer.msg('用户名或密码错误');
+            });
+        }
+
     });
     $(function(){
         $("#canvas").jParticle({
