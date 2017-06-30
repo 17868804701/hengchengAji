@@ -61,12 +61,6 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                     "icon": "&#xe62c;",
                     "pid": "40"
                 }
-                // ,
-                // {
-                //     "title": "客户",
-                //     "icon": "larry-ht_expand",
-                //     "pid": "46"
-                // }
                 ] ;
             larry.set({
                 elem: '#menu',
@@ -109,7 +103,7 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                             {
                                 "pid": "101",
                                 "title": "数据字典配置",
-                                "icon": "larry-gerenxinxi5",
+                                "icon": "larry-zidian",
                                 "spread": "true",
                                 "children": [{
                                     "title": "航空公司信息配置",
@@ -118,19 +112,14 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                                 },
                                     {
                                         "title": "客户信息配置",
-                                        "icon": "larry-xiugaimima2",
+                                        "icon": "larry-10103",
                                         "href": "html/kehuInfo.html"
                                     },
                                     {
                                         "title": "代理信息配置",
-                                        "icon": "larry-xiugaimima2",
+                                        "icon": "larry-10103",
                                         "href": "html/kehuInfo.html"
                                     },
-                                    // {
-                                    //     "title": "系统用户角色",
-                                    //     "icon": "larry-rizhi2",
-                                    //     "href": "html/myloginfo111.html"
-                                    // }
                                 ]
                             },
                             {
@@ -168,32 +157,14 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                         var pid_35 = [{
                             "title": "单证录入",
                             "icon": "larry-30wangzhanguanli",
+                            "href": "html/danzhengUpdate.html",
                             "spread": "true",
-                            "children": [{
-                                "title": "运单单证信息录入",
-                                "icon": "larry-gerenxinxi1",
-                                "href": "html/danzhengInsert.html"
-                            },
-                                {
-                                    "title": "运单单证信息更改",
-                                    "icon": "larry-xiugaimima2",
-                                    "href": "html/danzhengUpdate.html"
-                                }]
                         },
                             {
                                 "title": "运单仓储录入",
                                 "icon": "larry-moxingguanli",
+                                "href": "html/cangchuUpdate.html",
                                 "spread": "true",
-                                "children": [{
-                                    "title": "运单仓储信息录入",
-                                    "icon": "larry-gerenxinxi1",
-                                    "href": "html/cangchuInsert.html"
-                                },
-                                    {
-                                        "title": "运单仓储信息更改",
-                                        "icon": "larry-xiugaimima2",
-                                        "href": "html/cangchuUpdate.html"
-                                    }]
                             },
                             {
                                 "title": "运单流程处理",
@@ -236,27 +207,12 @@ layui.use(['elements', 'jquery', 'layer', 'larry', 'navtab', 'form', 'common'],
                             "icon": "&#xe62c;",
                             "spread": "true",
                             "children": [
-                            //     {
-                            //     "title": "导出报表",
-                            //     "icon": "larry-api1",
-                            //     "href": "html/temp.html"
-                            // },
                                 {
                                 "title": "报表模板配置",
                                 "icon": "larry-api1",
                                 "href": "html/temp.html"
                             }]
-                        }]
-                        // var pid_46 = [{
-                        //     "title": "客户",
-                        //     "icon": "larry-weixinguanli",
-                        //     "spread": "true",
-                        //     "children": [{
-                        //         "title": "客户列表配置",
-                        //         "icon": "larry-api1",
-                        //         "href": "html/temp.html"
-                        //     }]
-                        // }];
+                        }];
                         var result;
                         if (id == 0) result = pid_0;
                         if (id == 35) result = pid_35;
